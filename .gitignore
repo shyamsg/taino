@@ -2,4 +2,11 @@
 *~
 
 ## data directory
-data
+1_*
+2_*
+
+## Hidden files
+.*
+
+## liftover files
+liftover
