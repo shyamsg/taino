@@ -1,5 +1,5 @@
 # Peopling of the Caribbean: Taino
-This repository contains the code and analyses for the Taino project, which involves analysing the genome of an ancient taino individual from the Bahamas. The project is led by our fearless leader, Hannes Schroeder (KU/Leiden). 
+This repository contains the code and analyses for the Taino project, which involves analysing the genome of an ancient Taino individual from the Bahamas. The project is led by our fearless leader, Hannes Schroeder (KU/Leiden). 
 ## Data 
 The data is split into two parts: 1. the ancient taino genome and 2. the reference panel (external data) used to provide a global and local context to the ancient genome. The ancient taino genome was collected and process by Hannes. The reference panel data comes from multiple sources, both published and unpublished data, including David Reich's Native American genomes, Venezuelan and Peruvian genomes from Carlos Bustamante's lab and Caribbean genomes from Hannes' previous work in the Bustamante lab. 
 Note: The data is _NOT_ backed up on github. Upon publishing of the manuscript, the data download link will be added to the readme. 
