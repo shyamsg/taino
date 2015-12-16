@@ -35,24 +35,21 @@ fi
 cd $REF_HOME/merged
 
 ARL_ROOT=$REF_HOME/1_ARL/MaskedPlink/ARL2_masked_hg19_refStrandUCSC
-CAR_ROOT=$REF_HOME/2_CAR/MaskedPlink/GOAL_Caribbean_hg19_refStrandUCSC_masked
+CAR_ROOT=$REF_HOME/2_CAR/MaskedPlink/GOAL_Caribbean_hg19_refStrandUCSC_masked_flipped
 PER_ROOT=$REF_HOME/3_PER/MaskedPlink/yanesha.autosomes.hg19_masked
 VEN_ROOT=$REF_HOME/4_VEN/MaskedPlink/Venezuela_hg19_masked_refStrandUCSC
-AFR_ROOT=$REF_HOME/5_AFR/Afr
-EUR_ROOT=$REF_HOME/6_EUR/Eur
+AFREUR_ROOT=$REF_HOME/5_AFREUR/AFREUR.merged
 ## make the file with input bed files to merge. 
 echo "
-$ARL_ROOT
 $CAR_ROOT
-$PER_ROOT
-$VEN_ROOT
-" > initial.merge.txt
+$AFREUR_ROOT
+" > merge.CARAFREUR.txt
 
 ## Note that this initial merge contains the files from directories 1-6
-export MERGEPREFIX="merged.123456.initial"
+export MERGEPREFIX="merged.CARAFREUR.initial"
 
 ## Initial merging 
-$PLINK --merge-list initial.merge.txt --make-bed --out ${MERGEPREFIX}.masked
+$PLINK --merge-list merge.CARAFREUR.txt --make-bed --out ${MERGEPREFIX}.masked
 
 # ## Figure out which snps need to be flipped.
 # $PLINK --bfile $VEN_ROOT --flip taino.masked-merge.missnp --make-bed --out $VEN_ROOT.flip  ## flip 1027 mismatch SNPs in Venezuelans
